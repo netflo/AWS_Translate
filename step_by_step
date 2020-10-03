@@ -1,0 +1,21 @@
+
+this is for batch translations
+
+When the batch translation job is submitted, you have to specify a data access role providing Amazon Translate with the appropriate permissions.
+Sample policy statement that can be applied to the data access role.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "translate:*",
+                "comprehend:DetectDominantLanguage",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics"
+             ],   
+            "Resource": "*"
+        }
+    ]
+}
